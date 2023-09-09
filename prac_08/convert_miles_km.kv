@@ -1,0 +1,36 @@
+BoxLayout:
+    orientation: "vertical"
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: 0.5
+        TextInput:
+            id: input_number
+            font_size: 48
+            text: "34"
+            multiline: False
+            on_text: app.handle_calculation()
+        BoxLayout:
+            orientation: "vertical"
+            size_hint_x: 0.3
+            Button:
+                font_size: 36
+                text: "Up"
+                on_press: app.handle_increment(1)
+            Button:
+                font_size: 36
+                text: "Down"
+                on_press: app.handle_increment(-1)
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            font_size: 36
+            text: "Convert miles to km"
+            on_press: app.handle_calculation()
+        Label:
+            id: output_number
+            font_size: 48
+            color: (1, 1, 0, 1)
+            text: "54.71756"
+
+
+
